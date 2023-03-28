@@ -10,6 +10,8 @@ services:
       - postgres_data:/var/lib/postgresql/data
   dart_backend:
     build: ./dart_backend
+    ports:
+      - 6200:6200
     environment:
       # DATABASE_URL: postgres://postgres:password@db:5432/postgres
       DB_USERNAME: postgres
